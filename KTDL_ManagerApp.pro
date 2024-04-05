@@ -1,4 +1,5 @@
 QT += quick charts
+QT += network
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -7,7 +8,8 @@ QT += quick charts
 SOURCES += \
         backendcontroler.cpp \
         chartviewmodel.cpp \
-        main.cpp
+        main.cpp \
+        ravendbconnector.cpp
 
 RESOURCES += qml.qrc
 
@@ -24,4 +26,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     backendcontroler.h \
-    chartviewmodel.h
+    chartviewmodel.h \
+    ravendbconnector.h

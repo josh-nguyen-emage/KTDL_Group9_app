@@ -10,5 +10,4 @@ BackendControler::~BackendControler(){}
 QString BackendControler::exampleFunction(const QString& scriptPath)
 {
     return "Everything work, for now";
-
 }
