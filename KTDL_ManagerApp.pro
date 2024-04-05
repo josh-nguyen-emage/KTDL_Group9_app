@@ -1,4 +1,4 @@
-QT += quick
+QT += quick charts
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -6,6 +6,7 @@ QT += quick
 
 SOURCES += \
         backendcontroler.cpp \
+        chartviewmodel.cpp \
         main.cpp
 
 RESOURCES += qml.qrc
@@ -22,4 +23,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    backendcontroler.h
+    backendcontroler.h \
+    chartviewmodel.h
