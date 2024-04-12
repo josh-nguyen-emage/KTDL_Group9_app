@@ -41,12 +41,12 @@ def read_products_data():
             mall_certification = row['p_mall']
             total_product_reviews = row['p_number_reviews']
             price = row['p_price']
-            product_rate1star = row['p_rate1star']
-            product_rate2star = row['p_rate2star']
-            product_rate3star = row['p_rate3star']
-            product_rate4star = row['p_rate4star']
-            product_rate5star = row['p_rate5star']
-            product_average_rating = row['p_rating']
+            product_rate1star = int(row['p_rate1star'])
+            product_rate2star = int(row['p_rate2star'])
+            product_rate3star = int(row['p_rate3star'])
+            product_rate4star = int(row['p_rate4star'])
+            product_rate5star = int(row['p_rate5star'])
+            product_average_rating = round(float(product_rate1star + product_rate2star * 2 + product_rate3star * 3 + product_rate4star * 4 + product_rate5star * 5) / (product_rate1star + product_rate2star + product_rate3star + product_rate4star + product_rate5star),1) if (product_rate1star + product_rate2star + product_rate3star + product_rate4star + product_rate5star) != 0 else 0
             seller_name = row['s_name']
             seller_rating = 0
             if row['s_rating'] != '---':
@@ -87,7 +87,7 @@ def read_products_data():
                 category_dict[category] = category_id
                 categories.append(Category(category_id, category))
             
-            product = Product(None, name, brand, category_dict[category], category, image, mall_certification, int(total_product_reviews), float(price), int(product_rate1star), int(product_rate2star), int(product_rate3star), int(product_rate4star), int(product_rate5star), int(product_average_rating), seller_name, seller_names[seller_name])
+            product = Product(None, name, brand, category_dict[category], category, image, mall_certification, int(total_product_reviews), float(price), product_rate1star, product_rate2star, product_rate3star, product_rate4star, product_rate5star, product_average_rating, seller_name, seller_names[seller_name])
             products.append(product)
         
         for seller in sellers_dict.values():
