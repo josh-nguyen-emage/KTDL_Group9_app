@@ -1,0 +1,2 @@
+Accumulated messages received in the last minute:
+ 1713081656.5909605

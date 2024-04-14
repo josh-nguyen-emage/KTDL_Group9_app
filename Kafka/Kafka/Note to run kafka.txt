@@ -1,0 +1,29 @@
+Note: using Git Bash to run .sh files in window environment. (open git bash, cd to the kafka directory, for example: $ cd /d/kafka)
+if not using git bash, run .bat file on cmd terminal instead.
+
+1. zoo keeper start:   
+$ bin/zookeeper-server-start.sh config/zookeeper.properties
+
+2. server(broker) start:
+$ bin/kafka-server-start.sh config/server.properties
+
+3. producer start: (after start, can write event to topic)
+bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+
+4. listener start: (after start, will read all event written to topic)
+bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+
+5. create topic: 
+$ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+
+6. check all topic: 
+$ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+7. start the sending process
+$ python Python/update_kafka_topic_every_one_minutes.py
+
+8. delete topic
+$ bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic streams-plaintext-input
+
+9. clean server and broker:
+remove all files from kafka-logs dir ,logs dir and zookeeper dir, then restart
