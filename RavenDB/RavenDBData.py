@@ -1,16 +1,10 @@
 from pyravendb.store import document_store
-from Entity import Product, Seller, Category, Customer, Inventory, Sale, Promotion
+from Entity import server_url, database_name, certificate, Product, Seller, Category, Customer, Inventory, Sale, Promotion
 from datetime import datetime
 import random
 import csv
 
-# Configuration
-server_url = "https://a.bigdataapp.ravendb.community"
-database_name = "ECommerce"
-a = {"pfx":"E:\RavenDB-6.0.101-windows-x64\Server\cluster.server.certificate.bigdataapp.pfx","password":""}
-
-# Create a document store and initialize it with certificate
-store = document_store.DocumentStore(urls=[server_url], database=database_name, certificate=a)
+store = document_store.DocumentStore(urls=[server_url], database=database_name, certificate=certificate)
 store.initialize()
 
 category_ids = []
