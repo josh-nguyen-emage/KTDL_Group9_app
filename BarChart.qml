@@ -19,7 +19,7 @@ Item {
             BarSet {
                 id: mainBarSet
                 label: "Bob";
-                values: [2,4,1,6,3]
+                values: [20,40,10,70,30]
 
                 function updateChart(newValues) {
                     values = newValues

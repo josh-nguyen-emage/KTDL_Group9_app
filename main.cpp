@@ -3,7 +3,7 @@
 #include <QQmlContext>
 #include <backendcontroler.h>
 #include <chartviewmodel.h>
-#include <ravendbconnector.h>
+
 
 
 int main(int argc, char *argv[])

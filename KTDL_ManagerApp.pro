@@ -8,8 +8,7 @@ QT += network
 SOURCES += \
         backendcontroler.cpp \
         chartviewmodel.cpp \
-        main.cpp \
-        ravendbconnector.cpp
+        main.cpp
 
 RESOURCES += qml.qrc
 
@@ -26,5 +25,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     backendcontroler.h \
-    chartviewmodel.h \
-    ravendbconnector.h
+    chartviewmodel.h

@@ -2,5 +2,12 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>BarChart.qml</file>
+        <file>TabView.qml</file>
+        <file>Tab_1_ProductSuggestions.qml</file>
+        <file>Tab_2_CustomerDemand.qml</file>
+        <file>Tab_3_InventoryManagment.qml</file>
+        <file>Tab_4_ProductReview.qml</file>
+        <file>Tab_5_SellerReviews.qml</file>
+        <file>Tab_6_PromotionProgram.qml</file>
     </qresource>
 </RCC>
